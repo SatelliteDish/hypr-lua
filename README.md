@@ -129,9 +129,9 @@ Access via `config.programs.hypr-lua.lib` (conventionally aliased to `hl`).
 
 ## Known limitations
 
-- **Parametered events** — `on` handlers that receive event parameters (e.g. `window.active` which passes the window) are not yet supported. Use `extraConfig` or `mkLuaInline` for these.
-- **Bind options** — the `{ locked, repeating, mouse }` third argument to `hl.bind` is not yet supported. Use `extraConfig` for binds that need these.
-- **Complex dispatchers** — helpers that take tables (`focus`, `window.float`, `window.move` etc.) are not provided since their parameter shapes vary. Use `lib.generators.mkLuaInline` directly.
+- **Parametered events** - `on` handlers that receive event parameters (e.g. `window.active` which passes the window) are not yet supported. Use `extraConfig` or `mkLuaInline` for these.
+- **Bind options** - the `{ locked, repeating, mouse }` third argument to `hl.bind` is not yet supported. Use `extraConfig` for binds that need these.
+- **Complex dispatchers** - helpers that take tables (`focus`, `window.float`, `window.move` etc.) are not provided since their parameter shapes vary. Use `lib.generators.mkLuaInline` directly.
 
 ## Contributing
 
