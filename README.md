@@ -2,7 +2,7 @@
 
 A Nix home-manager module for configuring Hyprland's Lua config declaratively.
 
-Since Hyprland 0.55, configuration uses Lua instead of hyprlang. While home-manager's `wayland.windowManager.hyprland.settings` exposes the raw config as a Nix attrset, working with `mkLuaInline` and `_args` everywhere is verbose and error-prone. hypr-lua wraps the most common patterns into a clean interface, with an escape hatch for anything it doesn't cover yet.
+Since Hyprland 0.55, configuration uses Lua instead of hyprlang. While home-manager's `wayland.windowManager.hyprland.settings` exposes the raw config as a Nix attrset, working with `mkLuaInline` and `_args` everywhere is verbose and error-prone. hypr-lua wraps the most common patterns into a clean interface, with escape hatches per-value using `mkLuaInline` and globally via `extraConfig`.
 
 ## Installation
 
@@ -92,7 +92,7 @@ workspace switching, ricing config, and environment variables.
 
 ## lib helpers
 
-Access via `config.programs.hypr-lua.lib` (conventionally aliased to `hl`).
+Access via `config.programs.hypr-lua.lib` (conventionally aliased to `hl`). All helpers resolve to `luaInline`, meaning any time the option you want is not present you can pass it directly with `mkLuaInline`.
 
 ### Top-level
 
