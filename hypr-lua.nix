@@ -88,6 +88,7 @@ in
       mkLua = lib.mkLuaInline;
     in {
       exec_cmd = cmd: mkLua ''${pre}.exec_cmd("${cmd}")'';
+      get_config = cfg: mkLua ''${pre}.get_config("${cfg}")'';
       dsp = let
         pre = "hl.dsp";
       in {
