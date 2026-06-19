@@ -155,4 +155,15 @@ in
       text = cfg.extraConfig;
     };
   };
+
+  meta = {
+    maintainers = with lib.maintainers; [
+      {
+        name = "Michael Vitale";
+        email = "michael@sortofrad.com";
+        github = "SatelliteDish";
+        githubId = "94733164";
+      }
+    ];
+  };
 }
